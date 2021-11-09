@@ -34,7 +34,7 @@ Example
     corp_list = dart.get_corp_list()
 
     # 삼성전자
-    samsung = corp_list.find_by_corp_name(corp_code=corp_code)
+    samsung = corp_list.find_by_corp_code(corp_code=corp_code)
 
     # 사업보고서 검색
     reports = samsung.search_filings(bgn_de='20190101', pblntf_detail_ty='a001')
@@ -62,3 +62,4 @@ Example
 
     # Pandas DataFrame으로 변환 / 분류 정보 제외
     df_wo_class = cf.to_DataFrame(show_class=False)
+    
